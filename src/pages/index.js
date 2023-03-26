@@ -11,7 +11,6 @@ const MapWithNoSSR = dynamic(() => import("./Map"), {
 export default function Home() {
   const [userIp, setUserIp] = useState([]);
   const [myTime, setMyTime] = useState();
-  const [countryInfo, setCountryInfo] = useState([]);
 
   useEffect(() => {
     const now = DateTime.now().toString();
