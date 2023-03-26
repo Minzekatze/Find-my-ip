@@ -3,6 +3,7 @@ import axios from "axios";
 import dynamic from "next/dynamic";
 import { DateTime } from "luxon";
 import { Card } from "antd";
+
 const MapWithNoSSR = dynamic(() => import("./Map"), {
   ssr: false,
 });
@@ -65,7 +66,7 @@ export default function Home() {
             type="inner"
             title="Geographical location"
           >
-            <MapWithNoSSR />
+            {typeof window !== "undefined" && <MapWithNoSSR />}
           </Card>
         </Card>
       </div>
