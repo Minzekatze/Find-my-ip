@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { DateTime } from "luxon";
 import { Card } from "antd";
 
-const MapWithNoSSR = dynamic(() => import("./Map"), {
+const MapWithNoSSR = dynamic(() => import("./Map.js"), {
   ssr: false,
 });
 
