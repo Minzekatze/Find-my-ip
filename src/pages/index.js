@@ -4,13 +4,13 @@ import dynamic from "next/dynamic";
 import { DateTime } from "luxon";
 import { Card } from "antd";
 
-const MapWithNoSSR = dynamic(() => import("./Map.js"), {
+const MapWithNoSSR = dynamic(() => import("../components/Map.js"), {
   ssr: false,
 });
 
 export default function Home() {
   const [userIp, setUserIp] = useState([]);
-  const [myTime, setMyTime] = useState();
+  const [myTime, setMyTime] = useState(null);
 
   useEffect(() => {
     const now = DateTime.now().toString();

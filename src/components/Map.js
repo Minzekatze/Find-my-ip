@@ -6,8 +6,8 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
 export default function Map() {
-  const [lat, setlat] = useState();
-  const [lng, setlng] = useState();
+  const [lat, setlat] = useState(null);
+  const [lng, setlng] = useState(null);
 
   useEffect(() => {
     axios
