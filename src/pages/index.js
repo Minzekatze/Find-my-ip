@@ -46,7 +46,7 @@ export default function Home() {
               <p className="item font-extrabold ">Your IP information:</p>
               <p className="item">Time: {myTime}</p>
               <p className="item">ISP: {userIp.isp}</p>
-              <p className="item">City: {userIp.country_capital}</p>
+              <p className="item">City: {userIp.city}</p>
               <p className="item">ZIP: {userIp.zipcode}</p>
               <p className="item">Calling: {userIp.calling_code}</p>
               <p className="item">Language: {userIp.languages}</p>
@@ -65,7 +65,7 @@ export default function Home() {
             type="inner"
             title="Geographical location"
           >
-            {typeof window !== "undefined" && <MapWithNoSSR />}
+            <MapWithNoSSR userIp={userIp} />
           </Card>
         </Card>
       </div>
